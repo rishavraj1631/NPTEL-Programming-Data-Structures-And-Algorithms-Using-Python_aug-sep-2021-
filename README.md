@@ -1,24 +1,12 @@
 # NPTEL-Programming-Data-Structures-And-Algorithms-Using-Python_aug-sep-2021-
 code part of the code assignment is available here
 
-................................................................solution line 115-155.........................................................
-................................................................solution line 115-155.........................................................
-................................................................solution line 115-155.........................................................
-
 
 
 Week 3 Programming Assignment
 
-................................................................solution line 115-155.........................................................
-................................................................solution line 115-155.........................................................
-................................................................solution line 115-155.........................................................
-
 
 Due on 2021-08-26, 23:59 IST
-
-................................................................solution line 115-155.........................................................
-................................................................solution line 115-155.........................................................
-................................................................solution line 115-155.........................................................
 
 
 Write three Python functions as specified below. Paste the text for all three functions together into the submission window. Your function will be called automatically with various inputs and should return values as specified. Do not write commands to read any input or print any output.
@@ -28,10 +16,6 @@ For each function, there are normally some public test cases and some (hidden) p
 "Compile and run" will evaluate your submission against the public test cases.
 "Submit" will evaluate your submission against the hidden private test cases. There are 12 private test cases, with equal weightage. You will get feedback about which private test cases pass or fail, though you cannot see the actual test cases.
 Ignore warnings about "Presentation errors".
-
-................................................................solution line 115-155.........................................................
-................................................................solution line 115-155.........................................................
-................................................................solution line 115-155.........................................................
 
 
 1.Write a function expanding(l) that takes as input a list of integer l and returns True if the absolute difference between each adjacent pair of elements strictly increases.
@@ -50,9 +34,10 @@ Explanation: Differences between adjacent elements are 3-1 = 2, 7-3 = 4, 7-2 = 5
   False
 Explanation: Differences between adjacent elements are 3-1 = 2, 7-3 = 4, 10-7 = 3, so not increasing.
 
-................................................................solution line 115-155.........................................................
-................................................................solution line 115-155.........................................................
-................................................................solution line 115-155.........................................................
+
+
+
+
 
 2.Write a Python function sumsquare(l) that takes a nonempty list of integers and returns a list [odd,even], where odd is the sum of squares all the odd numbers in l and even is the sum of squares of all the even numbers in l.
 
@@ -68,9 +53,6 @@ Here are some examples to show how your function should work.
 [59, 4]
 
 
-................................................................solution line 115-155.........................................................
-................................................................solution line 115-155.........................................................
-................................................................solution line 115-155.........................................................
 
 
 3.A two dimensional matrix can be represented in Python row-wise, as a list of lists: each inner list represents one row of the matrix. For instance, the matrix
@@ -101,57 +83,3 @@ Here are some examples to show how your function should work. You may assume tha
 [[3]]
 
 
-
-................................................................solution line 115-155.........................................................
-................................................................solution line 115-155.........................................................
-................................................................solution line 115-155.........................................................
-................................................................solution line 115-155.........................................................
-
-
-
-
-
-
-code...............................................
-
-
-def expanding(l):
-    a=0
-    for i in range(1,len(l)):
-        if a >= abs(l[i]-l[i-1]):
-            return False
-        a=abs(l[i]-l[i-1])
-    else:
-        return True
-
-
-
-def sumsquare(l):
-  odd=0
-  even=0
-  length=len(l)
-  for i in range(length):
-    if l[i]%2==0:
-      even=even+l[i]*l[i]
-    else:
-      odd=odd+l[i]*l[i]
-  l=[odd,even]
-  return(l)     
-  
-  
-  
-  
-  
- def transpose(l1):
-  l2=[]
-  for i in range(len(l1[0])):
-    row=[]
-    for item in l1:
-      row.append(item[i])
-    l2.append(row)
-  return l2
-  
-  
-  
-  
-  
